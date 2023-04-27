@@ -22,7 +22,7 @@ gitlabRootPassword: "P@ssw0rd"
 ## For minikube, set this to NodePort, elsewhere use LoadBalancer
 ## ref: http://kubernetes.io/docs/user-guide/services/#publishing-services---service-types
 ##
-serviceType: NodePort
+serviceType: LoadBalancer
 
 ## Ingress configuration options
 ##
