@@ -37,7 +37,7 @@ global:
     labels: {}
 
   ## https://docs.gitlab.com/charts/installation/deployment#deploy-the-community-edition
-  edition: ee
+  edition: ce
 
   ## https://docs.gitlab.com/charts/charts/globals#gitlab-version
   gitlabVersion: "15.11.0"
@@ -826,7 +826,7 @@ upgradeCheck:
 certmanager-issuer:
 #   # The email address to register certificates requested from Let's Encrypt.
 #   # Required if using Let's Encrypt.
-  email: email@example.com
+  email: renchaowei02@126.com.com
 
 ## Installation & configuration of jetstack/cert-manager
 ## See requirements.yaml for current version
@@ -845,7 +845,7 @@ certmanager:
 ## https://docs.gitlab.com/charts/architecture/decisions#nginx-ingress
 ## Installation & configuration of charts/ingress-nginx:
 nginx-ingress:
-  enabled: true
+  enabled: false
   tcpExternalConfig: "true"
   controller:
     addHeaders:
@@ -902,7 +902,7 @@ nginx-ingress:
 ## Installation & configuration of stable/prometheus
 ## See requirements.yaml for current version
 prometheus:
-  install: true
+  install: false
   rbac:
     create: true
   alertmanager:
