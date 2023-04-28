@@ -67,7 +67,7 @@ global:
     apiVersion: ""
     configureCertmanager: true
     provider: nginx
-    # class:
+    class: nginx
     annotations: {}
     enabled: true
     tls: {}
@@ -846,7 +846,7 @@ certmanager:
 ## Installation & configuration of charts/ingress-nginx:
 nginx-ingress:
   enabled: false
-  tcpExternalConfig: "true"
+  tcpExternalConfig: "false"
   controller:
     addHeaders:
       Referrer-Policy: strict-origin-when-cross-origin
@@ -904,7 +904,7 @@ nginx-ingress:
 prometheus:
   install: false
   rbac:
-    create: true
+    create: false
   alertmanager:
     enabled: false
   alertmanagerFiles:
@@ -1180,10 +1180,10 @@ grafana:
   ## https://artifacthub.io/packages/helm/grafana/grafana#sidecar-for-dashboards
   sidecar:
     dashboards:
-      enabled: true
+      enabled: false
       label: gitlab_grafana_dashboard
     datasources:
-      enabled: true
+      enabled: false
       label: gitlab_grafana_datasource
   ## We host Grafana as a sub-url of GitLab
   grafana.ini:
